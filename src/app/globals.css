@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 30s linear infinite;
+}
+
+.animate-slide:hover {
+  animation-play-state: paused;
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.animate-gradient-x {
+  background-size: 200% 100%; /* عرض 200% ليظهر الحركة بالعرض */
+  animation: gradient-x 4s linear infinite;
+}
+
+/* -----------border */
+.gradient-border {
+  background: linear-gradient(270deg, #00FFFF, #FF00FF, #8000FF, #00FFFF);
+  background-size: 600% 600%;
+  animation: gradient-rotate 8s linear infinite;
+  border-radius: 1rem; /* نفس radius للصورة */
+  padding: 2px; /* مساحة للـborder */
+}
+
+@keyframes gradient-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #00FFFF, #FF00FF);
+  border-radius: 4px;
+  
+}
+
+/*------------------------------------- hover menu--------------------- */
+.gradient-text {
+  background: linear-gradient(to right, #00FFFF, #FF00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.active-link {
+  position: relative;
+  color: transparent;
+  background: linear-gradient(to right, #00FFFF, #FF00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #00FFFF, #FF00FF);
+  border-radius: 4px;
+  animation: underline-slide 0.4s ease forwards;
+}
+
+@keyframes underline-slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
