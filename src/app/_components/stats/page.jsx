@@ -12,7 +12,7 @@ export default function Stats() {
     },
     {
       value: 100,
-      label: " المشروعات المنجزة",
+      label: "المشروعات المنجزة",
       icon: FaShip,
       color: "text-green-400",
     },
@@ -23,7 +23,7 @@ export default function Stats() {
       color: "text-yellow-400",
     },
     {
-      value:600000,
+      value: 600000,
       label: "إبداع بلا حدود",
       icon: FaCalendarAlt,
       color: "text-purple-400",
@@ -76,45 +76,47 @@ export default function Stats() {
     }, []);
 
     return (
-      <section
-        ref={sectionRef}
-        className="relative w-full py-20 bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage: "url('/images/yachtphoto1.jpg')",
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
+      <div className="w-full flex justify-center">
+        <section
+          ref={sectionRef}
+          className="relative w-full max-w-7xl py-20 bg-cover bg-center bg-fixed rounded-2xl mx-4"
+          style={{
+            backgroundImage: "url('/images/yachtphoto1.jpg')",
+          }}
+        >
+          {/* Overlay لوني لتخفيف التباين */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/50 rounded-2xl"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {statsData.map((stat, idx) => {
-              const IconComponent = stat.icon;
-              return (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center md:items-start md:flex-row gap-4 p-6 bg-transparent text-white text-center md:text-left"
-                >
-                  {/* Icon */}
-                  <div className="flex-shrink-0">
-                    <IconComponent className={`text-4xl ${stat.color}`} />
-                  </div>
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {statsData.map((stat, idx) => {
+                const IconComponent = stat.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-xl text-white text-center border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/15 hover:scale-105"
+                  >
+                    {/* الأيقونة في الأعلى */}
+                    <div className="mb-4">
+                      <IconComponent className={`text-5xl ${stat.color}`} />
+                    </div>
 
-                  {/* Text Content */}
-                  <div className="flex flex-col">
-                    <h3 className="text-3xl font-bold text-white">
-                      {stat.value >= 1000
-                        ? `${(counts[idx] / 1000).toFixed(0)}K+`
-                        : counts[idx].toLocaleString()}
-                    </h3>
-                    <p className="text-gray-300 text-sm mt-1">{stat.label}</p>
+                    {/* القيمة والتسمية تحتها */}
+                    <div className="flex flex-col">
+                      <h3 className="text-3xl font-bold text-white mb-2">
+                        {stat.value >= 1000
+                          ? `${(counts[idx] / 1000).toFixed(0)}K+`
+                          : counts[idx].toLocaleString()}
+                      </h3>
+                      <p className="text-gray-200 text-lg">{stat.label}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     );
   };
   return (

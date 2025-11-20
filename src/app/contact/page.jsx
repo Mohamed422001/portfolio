@@ -106,7 +106,7 @@ export default function ContactPage() {
         <div className="relative z-10 h-full flex items-center justify-center text-center px-4 py-10 md:py-0">
   <div className="max-w-4xl">
     <h1
-  className="text-4xl md:text-6xl font-bold mb-6 pb-4 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] bg-clip-text text-transparent"
+  className="text-4xl md:text-6xl font-bold mb-6 pb-4 text-white text-transparent"
 >
   تواصل معنا
 </h1>

@@ -26,8 +26,8 @@ export default function Navbar() {
   )}`;
 
   return (
-    <nav className="bg-black text-white shadow-md z-50 fixed top-0 right-0 left-0 w-full">
-      <div className="w-full flex items-center justify-between py-2 px-4 sm:px-8">
+    <nav dir="rtl" className="bg-black text-white shadow-md z-50000 fixed top-0 right-0 left-0 w-full">
+      <div className="w-full flex items-center justify-between  px-4 sm:px-8">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
@@ -41,15 +41,7 @@ export default function Navbar() {
 
         {/* Mobile Icons */}
         <div className="flex items-center space-x-4 px-2 sm:hidden">
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center space-x-4">
-               <div>
-                <FaWhatsapp size={20} className="text-green-600" />
-              </div>
-              <button dir="rtl" className="cursor-pointer">احجز الان</button>
-             
-            </div>
-          </a>
+         
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -84,14 +76,14 @@ export default function Navbar() {
           </div>
 
           {/* Right Icons */}
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center space-x-4">
-              <button className="cursor-pointer">احجز الان</button>
-              <div>
-                <FaWhatsapp size={20} className="text-green-600" />
-              </div>
-            </div>
-          </a>
+         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+  <div className="flex items-center space-x-2 space-x-reverse bg-[#0f1218] border border-gray-300 px-4 py-3 rounded-lg cursor-pointer transition hover:bg-gradient-to-r hover:from-[#00FFFF] hover:to-[#FF00FF] hover:text-white">
+    <FaWhatsapp size={20} className="text-green-600" />
+    <span className="font-medium ">احجز الآن 01128465022</span>
+  </div>
+         </a>
+
+
         </div>
       </div>
 
@@ -145,6 +137,13 @@ export default function Navbar() {
             >
               تواصل معنا
             </Link>
+
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+  <div className="flex items-center space-x-2 space-x-reverse bg-[#0f1218] border border-gray-300 px-4 py-3 rounded-lg cursor-pointer transition hover:bg-gradient-to-r hover:from-[#00FFFF] hover:to-[#FF00FF] hover:text-white">
+    <FaWhatsapp size={20} className="text-green-600" />
+    <span className="font-medium ">احجز الآن 01128465022</span>
+  </div>
+         </a>
           </div>
         </div>
       )}

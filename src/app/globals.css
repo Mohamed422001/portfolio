@@ -1,3 +1,14 @@
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+body {
+  font-family: "Almarai", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* باقي CSS هنا */
+
 @import "tailwindcss";
 @keyframes slide {
   0% {
@@ -7,6 +18,7 @@
     transform: translateX(-50%);
   }
 }
+
 
 .animate-slide {
   animation: slide 30s linear infinite;

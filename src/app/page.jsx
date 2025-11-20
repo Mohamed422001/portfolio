@@ -14,11 +14,23 @@ import {
   FaCouch,
   FaUtensils,
   FaSun,
+  FaPhone,
+  FaPhoneAlt,
+  FaWhatsapp,
   FaChair,
   FaLightbulb,
    FaHandshake ,
   FaBrain,
+  FaPalette,
   FaRocket,
+  FaShieldAlt,
+  FaEye,
+  FaHeadset,
+  FaCode,
+  FaBullseye,
+  FaPencilRuler,
+  FaUsers,
+  FaMobileAlt,
   FaBlender,
   FaWind,
 } from "react-icons/fa";
@@ -40,58 +52,78 @@ export default function Home() {
   const yachts = [
     {
       id: 1,
-      name: "💻 تصميم المواقع الإلكترونية",
+      name:  "   تصميم المواقع الإلكترونية  ",
       price: "نصمم مواقع احترافية بتجربة فريدة وأداء سريع.",
       image: "/images/w.jpg",
     },
     {
       id: 2,
-      name: "📱 تطبيقات الهواتف",
-      price: "نحول أفكارك لتطبيق يسهّل الوصول لعملائك.",
-      image: "/images/m.jpg",
+      name: "    خدمات التسويق المتكامل 360° ",
+      price: "نوصلك لجمهورك وتضاعف مبيعاتك بذكاء.",
+      image: "/images/360.jpeg",
     },
+   
     {
       id: 3,
-      name: "🚀 تحسين نتائج البحث في جوجل (SEO)",
-      price: "نرفع ظهورك في جوجل ونزيد زياراتك.",
-      image: "/images/s.jpg",
+      name: " تطبيقات الهواتف",
+      price: "نحول أفكارك لتطبيق يسهّل الوصول لعملائك.",
+      image: "/images/mob.jpeg",
     },
     {
       id: 4,
-      name: "🎨 تصميم واجهات وتجربة المستخدم (UI/UX)",
-      price: "نبتكر تصاميم عصرية وسهلة الاستخدام.",
-      image: "/images/u.jpg",
+      name: " تحسين نتائج البحث في جوجل (SEO)",
+      price: "نرفع ظهورك في جوجل ونزيد زياراتك.",
+      image: "/images/seo.jpeg",
     },
     {
       id: 5,
-      name: "📢 التسويق الإلكتروني الشامل (Digital Marketing)",
-      price: "نوصلك لجمهورك وتضاعف مبيعاتك بذكاء.",
-      image: "/images/mr.jpg",
+      name: " تصميم واجهات وتجربة المستخدم (UI/UX)",
+      price: "نبتكر تصاميم عصرية وسهلة الاستخدام.",
+      image: "/images/ui.jpeg",
+    },
+     {
+      id: 6,
+      name: " محتوى يحقق أهدافك",
+      price: "استضافة موثوقة وربط دومين احترافي",
+      image: "/images/cont.avif",
     },
     {
-      id: 6,
-      name: "🎬 المونتاج وصناعة المحتوى المرئي",
+      id: 7,
+      name: " المونتاج وصناعة المحتوى المرئي",
       price: "نحوّل أفكارك إلى فيديوهات احترافية تجذب وتؤثر.",
       image: "/images/v.jpg",
     },
+    {
+      id: 8,
+      name: " خطتك الإعلامية باحتراف",
+      price: "خطة إعلامية ذكية لتحقيق أفضل نتائج لمشروعك",
+      image: "/images/plan.jpeg",
+    },
+     {
+      id: 9,
+      name: " خطة إعلانات فعّالة",
+      price: "خطة إعلانية ذكية تزيد من وصولك وتجذب عملائك بسرعة",
+      image: "/images/ads.jpeg",
+    },
+   
    
   ];
 
   const leftFeatures = [
     {
-      icon: <FaAnchor className="text-xl" />,
+      icon: <FaShieldAlt className="text-xl" />,
       title: " الأمان و النسخ الاحتياطى",
       description:
         "من اهم مباديء التصميم هى الامان و تشفير الاتصال من خلال تركيب شهادة الامان للموقع كما اننا نقدم نسخ احتياطية و تحديثات أمنية وبرمجية بشكل مستمر and well-maintained yachts for the ultimate sea experience",
     },
     {
-      icon: <FaWater className="text-xl" />,
-      title: "مبرمجين محترفين",
+      icon: <FaCode className="text-xl" />,
+      title: "مبرمجين محترفين  ",
       description:
         "يدير عملك فريق متكامل من مبرمجين و مصممين و كتاب محتوى و مسوقين عبر السوشيال ميدياً لتركز فقط فى عملك.",
     },
     {
-      icon: <FaStar className="text-xl" />,
+      icon: <FaBullseye className="text-xl" />,
       title: "تسويق يحقق النتائج",
       description:
         "نضع استراتيجيات تسويقية ذكية تزيد ظهورك وتجذب عملاءك المستهدفين بثقة.",
@@ -100,19 +132,19 @@ export default function Home() {
 
   const rightFeatures = [
     {
-      icon: <FaUmbrellaBeach className="text-xl" />,
+      icon: <FaPencilRuler className="text-xl" />,
       title: "تصميم واجهات وتجربة المستخدم",
       description:
         "نبتكر تصاميم عصرية وسهلة الاستخدام تضمن تجربة سلسة وجذابة، تجمع بين الإبداع والوظائف العملية لتلبي احتياجات المستخدمين.",
     },
     {
-      icon: <FaCocktail className="text-xl" />,
+      icon: <FaUsers className="text-xl" />,
       title: "فريق عمل متكامل",
       description:
         "يدير عملك فريق متكامل من مبرمجين و مصممين و كتاب محتوى و مسوقين عبر السوشيال ميدياً لتركز فقط فى عملك.",
     },
     {
-      icon: <FaFish className="text-xl" />,
+      icon: <FaMobileAlt className="text-xl" />,
       title: "تصميمات صديقة للموبايل",
       description:
         "الجيل الحالى هو جيل الهواتف و اوضحت الاحصائيات ان 90% من التصفح من خلال الموبايل ! لا تقلق نقوم بعمل تصميم مخصص كاملاً للعمل علي الموبايل.",
@@ -147,7 +179,7 @@ export default function Home() {
       <section  className="px-4 py-8 lg:py-30">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
-            {/* المحتوى */}
+             {/* المحتوى */}
             <div className="w-full lg:w-1/2 text-left" dir="rtl">
               <div className="space-y-6 animate-fadeInUp">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
@@ -165,37 +197,62 @@ export default function Home() {
                 </h2>
 
                 <div className="space-y-4 text-white leading-relaxed">
-                  <p dir="rtl" className="text-base sm:text-lg text-right">
-                 في AZ-Technology نؤمن أن المستقبل يصنعه الابتكار، لذلك نكرّس شغفنا وخبراتنا لتقديم حلول رقمية متكاملة تساعد الشركات على النمو بثقة. نحن شركة متخصصة في تطوير المواقع والتطبيقات والمنصات التعليمية والمتاجر الإلكترونية، بالإضافة إلى تقديم خدمات التسويق الرقمي التي تعزز الظهور وتجذب العملاء. نعمل بروح من الإبداع والالتزام لتقديم تجربة رقمية مميزة تجمع بين الجمال والوظيفة، هدفنا أن نكون شريكك التقني في رحلتك نحو النجاح والتميز في العالم الرقمي.
-                  </p>
+                   <p dir="rtl" className="text-base sm:text-lg text-right">
+في AZ-Technology نصنع حلولًا رقمية مبتكرة تساعد الشركات على النمو وبناء حضور قوي في العالم الرقمي، من خلال تجربة تجمع بين الإبداع والتقنية.                       </p>
 
-                  <p className="text-base sm:text-lg text-right">
-                   نصنع الفارق من خلال الجمع بين الإبداع والتقنية، ونساعد عملاءنا على النمو وبناء حضور قوي في العالم الرقمي عبر حلول متكاملة مصممة خصيصًا لتناسب احتياجاتهم.
+  <div className="flex items-center gap-2 justify-start">
+  <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex">
+    <FaLightbulb className="text-base text-white" />
+  </div>
 
-                  </p>
-                  <div className="text-right pt-2">
-                     <Link href="/contact">
-                        <button className="bg-transparent cursor-pointer border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 ">
-                           تواصل معنا
-                        </button>
-                      </Link>
-                  </div>
+  <p className="text-base sm:text-lg text-right">
+    حلول رقمية مبتكرة تدعم نمو الشركات وتحقق حضور قوي في السوق.
+  </p>
+  </div>
+
+    <div className="flex items-center gap-2 justify-start">
+  <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex">
+    <FaPalette className="text-base text-white" />
+  </div>
+
+  <p className="text-base sm:text-lg text-right">
+تصميم وتطوير يجمع الإبداع والسرعة وتجربة استخدام مميزة.  </p>
+    </div>
+
+<div className="flex items-center gap-2 justify-start">
+  <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex">
+    <FaHandshake className="text-base text-white" />
+  </div>
+
+  <p className="text-base sm:text-lg text-right">
+     شراكة تقنية مستمرة لضمان التطوير والتحسين ودعمك في كل مرحلة
+  </p>
+</div>
+
+   
+   
+
+
+                  
 
                 </div>
               </div>
             </div>
 
-            {/* الصورة */}
+             {/* الصورة */}
             <div className="w-full lg:w-1/2">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105">
                 <img
                   src="/images/p1 (3).jpg"
+                  loading="lazy"
                   alt="Elite Pearl Yacht"
                   className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] object-cover transition-transform duration-700 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 to-blue-900/20 mix-blend-overlay"></div>
               </div>
             </div>
+           
+           
           </div>
         </div>
       </section>
@@ -204,81 +261,155 @@ export default function Home() {
 
       {/* Yachts Section */}
       <section className="max-w-7xl mx-auto px-4 py-12">
-        <h2 className="text-center text-3xl lg:text-5xl font-bold text-white mb-16">
-          خدماتنا المتميزة
-        </h2>
+  <h2 className="block text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-15">
+    خدماتنا المتميزة
+  </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-          {yachts.map((yacht, index) => (
-            <div
-              key={yacht.id}
-              className={`relative bg-transparent transition-all duration-300 ${
-                index % 3 === 1 ? "-mt-8" : "mt-0"
-              }`}
-            >
-              {/* Main Card Container */}
-              <div className="bg-[#0f1218] text-white rounded-2xl shadow-2xl overflow-hidden border border-gray-800">
-                {/* Image with Large Bottom Space */}
-                <div className="h-48 w-full overflow-hidden relative mb-16">
-                  <Image
-                    src={yacht.image}
-                    alt={yacht.name}
-                    width={400}
-                    height={192}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+    {yachts.map((yacht, index) => (
+      <div
+        key={yacht.id}
+        className="relative transition-all duration-300 h-full group"
+      >
+        {/* Main Card Container */}
+        <div className="bg-[#0f1218] text-white rounded-2xl shadow-2xl overflow-hidden border border-gray-600/30 hover:border-from-[#00FFFF] to-[#FF00FF] transition-all duration-300 h-full flex flex-col min-h-[550px]">
+          {/* Image Section with Hover Effect */}
+          <div className="h-48 w-full overflow-hidden relative mb-16">
+            <Image
+              loading="lazy"
+              src={yacht.image}
+              alt={yacht.name}
+              width={400}
+              height={192}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            {/* Overlay on Hover */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+          </div>
 
-                {/* Content Card */}
-                <div className="relative -top-12 mx-4">
-                  <div className="bg-[#0f1218] rounded-xl border border-gray-700 shadow-lg p-5">
-                    {/* Title */}
-                    <h2 className="text-lg font-bold text-center mb-4 text-white" dir="rtl">
-                      {yacht.name}
-                    </h2>
+          {/* Content Card */}
+          <div className="relative -top-12 mx-4 flex-1 flex flex-col cursor-pointer">
+            <div className="bg-[#0f1218] rounded-xl shadow-lg p-6 flex-1 flex flex-col ">
+              {/* Title */}
+              <h2 className="block text-3xl bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-2 text-center mb-4">
+                {yacht.name}
+              </h2>
 
-                    {/* Price Section */}
-                    <div className="flex justify-center items-baseline gap-3 mb-6 text-center" dir="rtl">
-                      <span className="text-gray-400 line-through text-sm">
-                        {yacht.oldPrice}
-                      </span>
-                      <span className="block text-right text-xl  bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FFOOFF] bg-clip-text text-transparent animate-gradient-x pb-1">
-                        {yacht.price}
-                      </span>
-                    </div>
+              {/* Price Section */}
+              <div className="flex justify-center items-baseline gap-3 mb-6 text-center" dir="rtl">
+                <span className="text-gray-400 line-through text-sm">
+                  {yacht.oldPrice}
+                </span>
+                <span className="text-xl text-white" dir="rtl">
+                  {yacht.price}
+                </span>
+              </div>
 
-                   
+              {/* Description (يمكن إضافته إذا كان موجوداً) */}
+              {yacht.description && (
+                <p className="text-gray-300 text-center mb-6 flex-1">
+                  {yacht.description}
+                </p>
+              )}
 
-                    {/* Buttons */}
-                    <div className="flex border-t border-gray-700 pt-4">
-                     <Link href="/services">
+              {/* Buttons Container - عمودي */}
+              <div className="space-y-3 mt-auto">
+                {/* زر عرض المزيد */}
+                <Link href="/services" className="block">
+                  <button className="w-full py-3 bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 text-lg rounded-lg border border-gray-300 cursor-pointer">
+                  عرض سابقة الاعمال
+                  </button>
+                </Link>
 
-                      <button className="flex-1 py-3 bg-white text-black font-semibold hover:bg-gray-200 transition text-lg rounded-l-lg border border-gray-300">
-                     عرض سابقة الاعمال
-                      </button>
-                     </Link>
-                      <a
-                        href={whatsappUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1"
-                      >
-
-                     <Link href="/contact">
-
-                        <button className="w-full py-3 cursor-pointer bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] hover:animate-gradient-x transition-all duration-500 font-semibold text-white text-lg shadow-lg hover:shadow-xl transform hover:scale-105 rounded-r-lg">
-                         تواصل معنا
-                        </button>
-                      </Link>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                {/* زر تواصل معنا */}
+                <a
+                  href="https://wa.me/201128465022"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <button  className="w-full py-3 cursor-pointer bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] hover:animate-gradient-x transition-all duration-500 font-semibold text-white text-lg shadow-lg hover:shadow-xl transform hover:scale-105 rounded-lg">
+                    تواصل معنا
+                  </button>
+                </a>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+{/*  🌐 خدمات استضافة ودومينات*/}
+<section className="py-5  from-blue-50 to-cyan-100 mb-3">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="block text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-1">  خدمات استضافة ودومينات</h2>
+      <div className="w-24 h-1 
+       mx-auto mb-6"></div>
+      <p className="text-white text-lg max-w-2xl mx-auto">
+        نقدم حلول متكاملة لاستضافة الويب وإدارة النطاقات بأعلى معايير الجودة
+      </p>
+    </div>
+
+    <div className="bg-[#0f1218] rounded-2xl shadow-xl p-8 max-w-4xl mx-auto border border-gray-200">
+      <div className="text-center mb-8">
+        <div className="w-16 h-16 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 className="text-2xl font-bold text-white mb-2">
+          خدمات استضافة ودومينات
+        </h3>
+        <p className="text-white">
+          استضافة موثوقة وربط دومين احترافي مع دعم فني متخصص
+        </p>
+      </div>
+
+      {/* المميزات السريعة */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+  {[
+    { icon: <FaRocket className="text-xl text-white" />, text: "سرعة فائقة" },
+    { icon: <FaShieldAlt className="text-xl text-white" />, text: "أمان متقدم" },
+    { icon: <FaEye className="text-xl text-white" />, text: "مراقبة مستمرة" },
+    { icon: <FaHeadset className="text-xl text-white" />, text: "دعم فني 24/7" }
+  ].map((item, index) => (
+    <div key={index} className="text-center p-3 bg-white/5 rounded-lg border  md:border-white/50">
+      <div className=" p-[10px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex justify-center items-center">
+        {item.icon}
+      </div>
+      <div className="text-sm text-white font-medium pt-2">{item.text}</div>
+    </div>
+  ))}
+</div>
+
+      {/* الأزرار */}
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+  <a href="tel:01004813709" className="w-full sm:w-auto">
+    <button className="w-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+      تواصل معنا
+    </button>
+  </a>
+
+  <a href="/host" className="w-full sm:w-auto">
+    <button className="w-full border-2 border-white text-white hover:bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] hover:text-blue font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+      </svg>
+      عرض المزيد
+    </button>
+  </a>
+</div>
+    </div>
+
+  </div>
+</section>
 
       {/* Stats Section */}
       <Stats />
@@ -287,7 +418,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* العنوان الرئيسي */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="block text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-1">
  ماذا نقدم لك ؟
           </h2>
           <p className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
@@ -305,7 +436,7 @@ export default function Home() {
                 key={index}
                 className="bg-[#0f1218] border border-[#f68b1e]/30 md:border-gray-800 p-6 rounded-xl shadow-lg mb-6 flex items-start transition-all duration-300 hover:shadow-xl hover:border-[#f68b1e]/30"
               >
-                <div className="text-[#f68b1e] mr-4 p-3 bg-[#1a1f2e] rounded-full">
+                <div className="text-white mr-4 p-2 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-full ml-2">
                   {feature.icon}
                 </div>
                 <div>
@@ -334,6 +465,7 @@ export default function Home() {
                    width={400}
                     height={320}
                     className="object-cover rounded-2xl w-full h-full"
+                    loading="lazy"
                    />
                  </div>
 
@@ -355,7 +487,7 @@ export default function Home() {
                 key={index}
                 className="bg-[#0f1218] border border-[#f68b1e]/30 md:border-gray-800 p-6 rounded-xl shadow-lg mb-6 flex items-start transition-all duration-300 hover:shadow-xl hover:border-[#f68b1e]/30"
               >
-                <div className="text-[#f68b1e] mr-4 p-3 bg-[#1a1f2e] rounded-full">
+                <div className="text-white mr-4 p-2 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-full ml-2">
                   {feature.icon}
                 </div>
                 <div>
@@ -370,98 +502,105 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white pb-5"
->
-            خبراتنا
+    <div className="container mx-auto px-4 py-2">
+ 
 
-          </h1>
-          <h2 className="text-2xl md:text-4xl font-semibold text-gray-200">
-           دعنا نتحدث هل تواجه تحدياً؟
+  {/* منهجية العمل */}
+  <div className="flex justify-center">
+  <div className="bg-white/5 rounded-3xl p-8 md:p-12 
+   border border-white/10 backdrop-blur-sm mb-16">
+    <div className="text-center mb-12">
+      <h2 className="block text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-1">
+        كيف نعمل؟
+      </h2>
+      <p className="text-gray-300 text-lg">نهج منهجي يضمن تحقيق أفضل النتائج</p>
+    </div>
 
-          </h2>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+      {/* خط التوصيل */}
+      <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] transform -translate-y-1/2 z-0 mt-3"></div>
+
+      {/* الخطوات */}
+      <div className="relative z-10 text-center group ">
+        <div className="w-16 h-16 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold shadow-lg ">
+          1
         </div>
+        <h3 className="text-white font-bold mb-2 pt-5">التحليل والتخطيط</h3>
+        <p className="text-gray-300 text-sm">نفهم احتياجاتك بدقة ونضع خطة عمل شاملة</p>
+      </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
-          {/* Left Column - Image */}
-          <div className="w-full lg:w-1/2">
-  <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
-    <Image
-      src="/images/p1 (2).jpg"
-      alt="Adsamy Yacht"
-      fill
-      className="object-cover"
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+      <div className="relative z-10 text-center group">
+        <div className="w-16 h-16 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold shadow-lg">
+          2
+        </div>
+        <h3 className="text-white font-bold mb-2 pt-5">التصميم والإبداع</h3>
+        <p className="text-gray-300 text-sm">نصمم واجهات جذابة وتجربة مستخدم فريدة</p>
+      </div>
+
+      <div className="relative z-10 text-center group">
+        <div className="w-16 h-16 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold shadow-lg">
+          3
+        </div>
+        <h3 className="text-white font-bold mb-2 pt-5">التطوير والبرمجة</h3>
+        <p className="text-gray-300 text-sm">نبني الحل بتقنيات حديثة وأفضل الممارسات</p>
+      </div>
+
+      <div className="relative z-10 text-center group">
+        <div className="w-16 h-16 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold shadow-lg">
+          4
+        </div>
+        <h3 className="text-white font-bold mb-2 pt-5">التسليم والدعم</h3>
+        <p className="text-gray-300 text-sm">نسلم المشروع وندعمه لضمان استمراريته</p>
+      </div>
+    </div>
   </div>
 </div>
 
 
-          {/* Right Column - Details */}
-          <div dir="rtl" className="lg:w-1/2 w-full space-y-6">
-            {/* Features Grid */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 w-full">
-              <h3 className="block text-right text-2xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FFOOFF] bg-clip-text text-transparent animate-gradient-x pb-1">
-                 نحوّل أفكارك إلى إنجازات ملموسة
+  {/* دعوة للعمل */}
+<div className="flex items-center justify-center  ">
+  <div
+    className="text-center relative h-[50vh] w-full max-w-4xl bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: "url('/images/so1.jpeg')"
+    }}
+  >
+    {/* Overlay غامق فوق الصورة */}
+    <div className="absolute inset-0 bg-black/60"></div>
 
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-                {features.map((feature, index) => {
-                  const IconComponent = feature.icon;
-                  return (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors w-full"
-                    >
-                      <IconComponent className="text-yellow-400 text-lg flex-shrink-0" />
-                      <span className="text-gray-200 text-sm sm:text-base">
-                        {feature.text}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
+    {/* المحتوى */}
+    <div className="relative z-10 bg-black/0 rounded-2xl p-8 md:p-10 h-full flex flex-col justify-center">
+      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+        مستعد لبدء مشروعك الرقمي؟
+      </h3>
+      <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
+        دعنا نناقش فكرتك ونحولها إلى واقع ملموس يدفع عملك نحو النجاح
+      </p>
 
-        {/* Booking Section - في المنتصف تحت الصورة والمميزات */}
-        <div className="mt-8 max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-2xl p-6 sm:p-8 text-center shadow-2xl">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-white">
-نبتكر الحلول الرقمية لنصنع المستقبل
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="tel:01004813709">
+          <button className="bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 min-w-[200px]">
+            تحدث مع خبير
+          </button>
+        </a>
 
-            </h3>
-
-            {/* Price (if available) */}
-            <div className="mb-6 sm:mb-8">
-              <p dir="rtl" className="text-white/80 text-xs sm:text-sm">شركة متخصصة في تطوير الحلول الرقمية والبرمجيات المبتكرة، نساعد الشركات على النمو من خلال تصميم مواقع احترافية، منصات تعليمية، ومتاجر إلكترونية متكاملة.
-
-</p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <button className="bg-black text-white cursor-pointer px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-gray-800 transition-colors w-full sm:w-auto min-w-[160px] sm:min-w-[200px]">
-                  عرض سابقة الاعمال
-                </button>
-              </a>
-              <Link href="/contact">
-                <button className="bg-white text-black cursor-pointer px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-gray-200 transition-colors w-full sm:w-auto min-w-[160px] sm:min-w-[200px]">
-                     تواصل معنا
-                    </button>
-              </Link>
-            </div>
-
-            <p dir="rtl" className="text-white/80 text-xs sm:text-sm mt-4 sm:mt-6">
-              دعم العملاء على مدار الساعة طوال أيام الأسبوع • ضمان أفضل الأسعار
-            </p>
-          </div>
-        </div>
-        
+        <Link href="/services">
+          <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] transform hover:-translate-y-1 min-w-[200px]">
+            شاهد أعمالنا
+          </button>
+        </Link>
       </div>
 
+      <p className="text-white text-sm mt-6">
+        استشارة مجانية • خطة عمل مفصلة • أسعار تنافسية • دعم مستمر
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
 
       <PeopleAlsoAsk />
 

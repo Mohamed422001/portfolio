@@ -66,57 +66,57 @@ export default function PeopleAlsoAsk() {
 
   return (
     <section className="w-full max-w-6xl mx-auto py-12 px-4">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-white mb-8">الاسئلة الشائعة</h1>
+   {/* Header */}
+<div className="text-center mb-12">
+  <h1 className="block text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-8">الاسئلة الشائعة</h1>
 
-        {/* Category Tabs */}
-        <div className="flex justify-center space-x-8 mb-8">
-          <button
-            onClick={() => {
-              setActiveCategory("individuals");
-              setOpenIndex(null);
-            }}
-            className={`px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 ${
-              activeCategory === "individuals"
-                ? "bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-white shadow-lg"
-                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
-          >
-            الاشخاص
-          </button>
-          <button
-            onClick={() => {
-              setActiveCategory("companies");
-              setOpenIndex(null);
-            }}
-            className={`px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 ${
-              activeCategory === "companies"
-                ? "bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-white shadow-lg"
-                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
-          >
-            الشركات
-          </button>
-        </div>
-      </div>
+  {/* Category Tabs */}
+  <div className="flex justify-center gap-3 mb-8">
+    <button
+      onClick={() => {
+        setActiveCategory("individuals");
+        setOpenIndex(null);
+      }}
+      className={`px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 border-2 ${
+        activeCategory === "individuals"
+          ? "bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-white shadow-lg border-transparent"
+          : "border-white text-white bg-transparent hover:bg-white hover:bg-opacity-10"
+      }`}
+    >
+      الاشخاص
+    </button>
+    <button
+      onClick={() => {
+        setActiveCategory("companies");
+        setOpenIndex(null);
+      }}
+      className={`px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 border-2 ${
+        activeCategory === "companies"
+          ? "bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-white shadow-lg border-transparent"
+          : "border-white text-white bg-transparent hover:bg-white hover:bg-opacity-10"
+      }`}
+    >
+      الشركات
+    </button>
+  </div>
+</div>
 
       {/* FAQs Grid */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className=" grid md:grid-cols-2 gap-8">
         {/* Left Column */}
-        <div dir="rtl" className="space-y-6">
+        <div dir="rtl" className=" space-y-6">
           {currentFAQs
             .slice(0, Math.ceil(currentFAQs.length / 2))
             .map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg"
+                className="bg-[#0f1218] rounded-xl shadow-md border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg text-white"
               >
                 <div
-                  className="flex justify-between items-center p-6 cursor-pointer"
+                  className="flex justify-between items-center p-6 cursor-pointer text-white"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <h3 className="text-lg font-semibold text-gray-800 pr-4">
+                  <h3 className="text-lg font-semibold text-white pr-4">
                     {faq.question}
                   </h3>
                   <span className=" flex-shrink-0">
@@ -131,7 +131,7 @@ export default function PeopleAlsoAsk() {
                 {openIndex === index && (
                   <div className="px-6 pb-6" dir="rtl">
                     <div dir="rtl" className="w-12 h-1 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] mb-4 rounded-full"></div>
-                    <p className="text-gray-600 leading-relaxed" dir="rtl" >
+                    <p className="text-white leading-relaxed" dir="rtl" >
                       {faq.answer}
                     </p>
                   </div>
@@ -149,13 +149,13 @@ export default function PeopleAlsoAsk() {
               return (
                 <div
                   key={actualIndex}
-                  className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg"
+                  className="bg-[#0f1218] rounded-xl shadow-md border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg"
                 >
                   <div
-                    className="flex justify-between items-center p-6 cursor-pointer"
+                    className="flex justify-between items-center p-6 cursor-pointer text-white"
                     onClick={() => toggleFAQ(actualIndex)}
                   >
-                    <h3 dir="rtl" className="text-lg font-semibold text-gray-800 pr-4">
+                    <h3 dir="rtl" className="text-lg font-semibold text-white pr-4 text-white">
                       {faq.question}
                     </h3>
                     <span dir="rtl"  className=" flex-shrink-0">
@@ -170,7 +170,7 @@ export default function PeopleAlsoAsk() {
                   {openIndex === actualIndex && (
                     <div className="px-6 pb-6">
                       <div className="w-12 h-1 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] mb-4 rounded-full"></div>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-white leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

@@ -41,7 +41,7 @@ const slides = [
     button: "احجز الان",
   },
   {
-    image: "/images/9.jpg",
+    image: "/images/so3.jpeg",
     title: " نصنع المستقبل بالحلول الرقمية",
     description: "نبتكر حلولاً رقمية مبتكرة تدفع أعمالك للأمام.",
     button: "احجز الان",
@@ -96,6 +96,7 @@ export default function SliderHome() {
               {/* خلفية: صورة أو فيديو */}
               {slide.image.endsWith(".mp4") ? (
                 <video
+                  loading="lazy"
                   src={slide.image}
                   autoPlay
                   loop
@@ -107,6 +108,7 @@ export default function SliderHome() {
                 <Image
                   src={slide.image}
                   alt={slide.title}
+                  loading="lazy"
                   fill
                   className="object-cover pointer-events-none"
                 />
@@ -115,20 +117,21 @@ export default function SliderHome() {
               {/* overlay */}
               <div className="absolute inset-0 bg-black/50"></div>
 
-              {/* المحتوى - إضافة pointer-events-auto */}
+              {/* المحتوى - تم تعديل المحاذاة */}
               <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6 pointer-events-none">
-                <div className="max-w-2xl pointer-events-auto">
-                  <h2 dir="rtl" className="text-4xl md:text-6xl font-bold mb-4 ">
+                <div className="max-w-2xl mx-auto pointer-events-auto flex flex-col items-center justify-center h-full">
+                  <h2 dir="rtl" className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 px-4">
                     {slide.title}
                   </h2>
-                  <p dir="rtl" className="text-lg md:text-xl mb-6">{slide.description}</p>
-                  {/* استبدال Link بـ a لفتح واتساب */}
+                  <p dir="rtl" className="text-base md:text-lg lg:text-xl mb-6 px-4 max-w-xl mx-auto">
+                    {slide.description}
+                  </p>
                   <a
-                    href={whatsappUrl}
+                    href="https://wa.me/201128465022"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <button className="bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] hover:animate-gradient-x cursor-pointer transition-all duration-500 px-8 py-4 rounded-full text-black font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <button className="bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] hover:animate-gradient-x cursor-pointer transition-all duration-500 px-6 py-3 md:px-8 md:py-4 rounded-full text-white font-semibold text-base md:text-lg shadow-lg hover:shadow-xl transform hover:scale-105">
                       {slide.button}
                     </button>
                   </a>
@@ -139,13 +142,13 @@ export default function SliderHome() {
         ))}
       </Swiper>
 
-      {/* أزرار التنقل فقط */}
+      {/* أزرار التنقل - تم تعديل المواقع */}
       <div className="absolute inset-0 flex items-center justify-between px-4 md:px-8 z-10 pointer-events-none">
-        <button className="custom-prev bg-white/90 hover:bg-white cursor-pointer p-3 md:p-4 rounded-full text-black shadow-lg hover:shadow-xl transition-all duration-300 pointer-events-auto">
-          <FaArrowLeft className="text-lg md:text-xl" />
+        <button className="custom-prev bg-white/10 hover:bg-white cursor-pointer p-2 md:p-3 lg:p-4 rounded-full text-black shadow-lg hover:shadow-xl transition-all duration-300 pointer-events-auto absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2">
+          <FaArrowLeft className="text-base md:text-lg lg:text-xl" />
         </button>
-        <button className="custom-next bg-white/90 hover:bg-white cursor-pointer p-3 md:p-4 rounded-full text-black shadow-lg hover:shadow-xl transition-all duration-300 pointer-events-auto">
-          <FaArrowRight className="text-lg md:text-xl" />
+        <button className="custom-next bg-white/10 hover:bg-white cursor-pointer p-2 md:p-3 lg:p-4 rounded-full text-black shadow-lg hover:shadow-xl transition-all duration-300 pointer-events-auto absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2">
+          <FaArrowRight className="text-base md:text-lg lg:text-xl" />
         </button>
       </div>
     </section>

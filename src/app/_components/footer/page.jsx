@@ -1,5 +1,5 @@
 "use client";
-import { FaInstagram, FaPhoneAlt, FaEnvelope ,FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaPhoneAlt, FaGlobe, FaEnvelope ,FaFacebook ,FaSearch,FaBullseye,FaTabletAlt,FaPencilRuler,FaVideo } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer() {
@@ -14,18 +14,36 @@ export default function Footer() {
 
   // روابط الخدمات
   const servicesLinks = [
-    { name: "💻 تصميم المواقع الإلكترونية", path: "#" },
-    { name: "🚀 تحسين نتائج البحث في جوجل (SEO)", path: "#" },
-    {
-      name: "📢 التسويق الإلكتروني الشامل (Digital Marketing)",
+    { 
+      name: "تصميم المواقع الإلكترونية",
       path: "#",
+      icon: <FaGlobe className="text-lg ml-2" />,
+    },
+    { 
+      name: "تحسين نتائج البحث في جوجل (SEO)", 
+      path: "#",
+      icon: <FaSearch className="text-lg ml-2" />,
     },
     {
-      name: "📱 تطبيقات الهواتف",
+      name: "التسويق الإلكتروني الشامل (Digital Marketing)",
       path: "#",
+      icon: <FaBullseye className="text-lg ml-2" />,
     },
-    { name: "🎨 تصميم واجهات وتجربة المستخدم (UI/UX)", path: "#" },
-    { name: "🎬 المونتاج وصناعة المحتوى المرئي", path: "#" },
+    {
+      name: "تطبيقات الهواتف",
+      path: "#",
+      icon: <FaTabletAlt className="text-lg ml-2" />,
+    },
+    { 
+      name: "تصميم واجهات وتجربة المستخدم (UI/UX)", 
+      path: "#",
+      icon: <FaPencilRuler className="text-lg ml-2" />,
+    },
+    { 
+      name: "المونتاج وصناعة المحتوى المرئي", 
+      path: "#",
+      icon: <FaVideo className="text-lg ml-2" />,
+    },
   ];
 
   return (
@@ -76,14 +94,17 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">
               خدماتنا
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {servicesLinks.map((service) => (
                 <li key={service.name}>
                   <Link
                     href={service.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="flex items-center text-gray-300 hover:text-white transition-colors group"
                   >
-                    {service.name}
+                    {service.icon}
+                    <span className="text-sm flex-1 group-hover:mr-1 transition-all">
+                      {service.name}
+                    </span>
                   </Link>
                 </li>
               ))}
@@ -97,7 +118,6 @@ export default function Footer() {
             </h3>
 
             <div className="mb-4">
-            
               {/* Map Placeholder */}
               <div className="aspect-video bg-gray-700 rounded-xl overflow-hidden">
                 <iframe
@@ -120,7 +140,6 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0" dir="ltr">
                © 2025 AZ-Technology. جميع الحقوق محفوظة.
-
             </div>
 
             {/* Contact Methods */}

@@ -119,7 +119,7 @@ export default function Reviews() {
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" dir="rtl">
+          <h1 className="block text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-4" dir="rtl">
             شركاؤنا في رحلة التميز
           </h1>
           <p className="text-xl md:text-2xl text-white" dir="rtl">
