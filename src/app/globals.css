@@ -104,12 +104,3 @@ body {
 }
 
 
-.gradient-border {
-  background: linear-gradient(45deg, #00FFFF, #FF00FF);
-  padding: 2px;
-  border-radius: 1rem;
-}
-
-.gradient-border > * {
-  border-radius: 0.875rem;
-}

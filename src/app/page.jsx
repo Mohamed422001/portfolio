@@ -473,22 +473,14 @@ export default function Home() {
 
          {/* الصورة في المنتصف */}
 <div className="lg:w-1/3 flex justify-center">
-  <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl border-2 border-gray-700">
+  <div className="relative w-full max-w-md h-80 rounded-2xl border-2 border-gray-700 overflow-hidden">
     <Image
       src="/images/P1(3).jpg"
       alt="Luxury Yacht Experience"
       width={400}
       height={320}
-      className="object-cover rounded-2xl w-full h-full"
+      className="w-full h-full object-cover"
     />
-    
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-      <div className="p-6 text-white">
-        <h3 className="text-xl font-bold mb-2">AZ-Technology</h3>
-        <p className="text-gray-200">نبتكر حلولاً رقمية بروح من الإبداع والشغف، لنساعد الشركات على المضي قدماً بثقة.</p>
-      </div>
-    </div>
   </div>
 </div>
 
