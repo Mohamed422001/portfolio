@@ -265,7 +265,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105">
                 <img
-                  src="/images/P1-3.jpg"
+                  src="/images/about.jpg"
                   loading="lazy"
                   alt="Elite Pearl Yacht"
                   className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] object-cover transition-transform duration-700 hover:scale-110"
@@ -477,7 +477,7 @@ export default function Home() {
             
             <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl p-1 ">
                <Image
-                  src="/images/P1-3.jpg"
+                  src="/images/about.jpg"
                   alt="az technology Experience"
                    width={400}
                     height={320}
