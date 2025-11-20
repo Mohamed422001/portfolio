@@ -475,7 +475,7 @@ export default function Home() {
           <div className="lg:w-1/3 flex justify-center">
             <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl border-2 ">
             
-            <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl p-1 ">
+            <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl p-1 gradient-border">
                <Image
                   src="/images/about.jpg"
                   alt="az technology Experience"
