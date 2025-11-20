@@ -144,10 +144,10 @@ export default function SliderHome() {
 
       {/* أزرار التنقل - تم تعديل المواقع */}
       <div className="absolute inset-0 flex items-center justify-between px-4 md:px-8 z-10 pointer-events-none">
-        <button className="custom-prev bg-white/10 hover:bg-white cursor-pointer p-2 md:p-3 lg:p-4 rounded-full text-black shadow-lg hover:shadow-xl transition-all duration-300 pointer-events-auto absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2">
+        <button className="custom-prev bg-white/10 hover:bg-white cursor-pointer p-2 md:p-3 lg:p-4 rounded-full text-white shadow-lg hover:shadow-xl transition-all duration-300 pointer-events-auto absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2">
           <FaArrowLeft className="text-base md:text-lg lg:text-xl" />
         </button>
-        <button className="custom-next bg-white/10 hover:bg-white cursor-pointer p-2 md:p-3 lg:p-4 rounded-full text-black shadow-lg hover:shadow-xl transition-all duration-300 pointer-events-auto absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2">
+        <button className="custom-next bg-white/10 hover:bg-white cursor-pointer p-2 md:p-3 lg:p-4 rounded-full text-white shadow-lg hover:shadow-xl transition-all duration-300 pointer-events-auto absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2">
           <FaArrowRight className="text-base md:text-lg lg:text-xl" />
         </button>
       </div>

@@ -267,11 +267,13 @@ export default function HostingPage() {
                   { feature: "عرض النطاق", value: "غير محدود", icon: "🚀" }
                 ].map((item, index) => (
                   <div key={index} className="flex justify-between items-center p-3 lg:p-4 bg-white/5 rounded-xl border border-white/10">
-                    <div className="flex items-center gap-3">
-                      <span className="text-lg lg:text-xl">{item.icon}</span>
-                      <span className="text-[#FF00FF] font-semibold text-[8px] lg:text-xs">{item.value}</span>
-                    </div>
+                    
                     <span className="text-gray-200 text-sm lg:text-base text-right">{item.feature}</span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-[#FF00FF] font-semibold text-[8px] lg:text-xs">{item.value}</span>
+                      <span className="text-lg lg:text-xl">{item.icon}</span>
+
+                    </div>
                   </div>
                 ))}
               </div>
@@ -409,10 +411,10 @@ export default function HostingPage() {
             {/* امتدادات النطاقات الشائعة */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
               {[
-                { extension: ".com", price: "$10.98", popular: true },
-                { extension: ".net", price: "$12.98", popular: false },
-                { extension: ".org", price: "$11.98", popular: false },
-                { extension: ".io", price: "$49.98", popular: true }
+                { extension: "com.", price: "$10.98", popular: true },
+                { extension: "net.", price: "$12.98", popular: false },
+                { extension: "org.", price: "$11.98", popular: false },
+                { extension: "io.", price: "$49.98", popular: true }
               ].map((domain, index) => (
                 <div 
                   key={index}
@@ -422,7 +424,7 @@ export default function HostingPage() {
                     setSearchResults(null);
                   }}
                 >
-                  <div className="text-2xl font-bold text-white mb-2">
+                  <div className="text-3xl font-bold text-[#FF00FF] mb-2">
                     {domain.extension}
                   </div>
                   <div className="text-white font-semibold text-sm">

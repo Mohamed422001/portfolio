@@ -57,17 +57,19 @@ export default function Footer() {
             <p className="text-gray-300 mb-4 leading-relaxed" dir="rtl">
              "نقدم حلولاً رقمية مبتكرة ترتقي بأعمالك نحو التميز والنجاح المستدام في العالم الرقمي."
             </p>
-            <div className="flex items-center space-x-4">
-              <a
-                href="https://www.facebook.com/share/1CmdxQUe1m/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-b from-blue-500 to-blue-500 p-2 rounded-full hover:scale-110 transition-transform"
-              >
-                <FaFacebook size={20} />
-              </a>
-              <span className="text-gray-300">@AZ-Technology</span>
-            </div>
+         <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 hover:bg-white/10 transition-all duration-300 group">
+  <a
+    href="https://www.facebook.com/share/1CmdxQUe1m/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 hover:scale-105 transition-transform duration-300"
+  >
+    <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-2 rounded-full">
+      <FaFacebook size={16} className="text-white" />
+    </div>
+    <span className="text-gray-300 text-sm font-medium">@AZ-Technology</span>
+  </a>
+</div>
           </div>
 
           {/* Menu Section */}
@@ -138,27 +140,32 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0" dir="ltr">
+
+            {/* Contact Methods */}
+            <div className="flex flex-row flex-wrap gap-3">
+  <a
+    href="tel:+201004813709"
+    className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:text-white hover:bg-white/20 transition-all duration-300 rounded-lg px-6 py-3 hover:scale-105"
+  >
+    <FaPhoneAlt className="text-[#00FFFF] text-lg" />
+    <span className="text-sm font-medium">+201004813709</span>
+  </a>
+
+  <a
+    href="mailto:info@a-ztechno.com"
+    className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:text-white hover:bg-white/20 transition-all duration-300 rounded-lg px-6 py-3 hover:scale-105"
+  >
+    <FaEnvelope className="text-[#FF00FF] text-lg" />
+    <span className="text-sm font-medium">info@a-ztechno.com</span>
+  </a>
+</div>
+
+
+            <div className="text-gray-400 text-sm  md:mb-0 mt-9 md:mt-0" dir="ltr">
                © 2025 AZ-Technology. جميع الحقوق محفوظة.
             </div>
 
-            {/* Contact Methods */}
-            <div className="flex space-x-6">
-              <a
-                href="tel:+201004813709"
-                className="flex items-center text-gray-300 hover:text-white transition-colors"
-              >
-                <FaPhoneAlt className="mr-2" />
-                <span className="text-sm">+201004813709</span>
-              </a>
-              <a
-                href="mailto:info@a-ztechno.com"
-                className="flex items-center text-gray-300 hover:text-white transition-colors"
-              >
-                <FaEnvelope className="mr-2" />
-                <span className="text-sm">info@a-ztechno.com</span>
-              </a>
-            </div>
+            
           </div>
         </div>
       </div>

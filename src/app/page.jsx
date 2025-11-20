@@ -183,15 +183,14 @@ export default function Home() {
             <div className="w-full lg:w-1/2 text-left" dir="rtl">
               <div className="space-y-6 animate-fadeInUp">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-<span
-  dir="rtl"
-  className="block text-right text-4xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FFOOFF] bg-clip-text text-transparent animate-gradient-x pb-1">
-  من نحن
-</span>
+           <span
+         dir="rtl" className="text-white block text-right text-3xl ">
+           من نحن             
+        </span>
 
 
 
-                   <span dir="rtl" className="text-white block text-right  pt-5">
+                   <span dir="rtl"  className="block text-right text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FFOOFF] bg-clip-text text-transparent animate-gradient-x pb-1 pt-5" >
                      قصتنا وخبراتنا
                   </span>
                 </h2>
@@ -314,7 +313,7 @@ export default function Home() {
           <div className="relative -top-12 mx-4 flex-1 flex flex-col cursor-pointer">
             <div className="bg-[#0f1218] rounded-xl shadow-lg p-6 flex-1 flex flex-col ">
               {/* Title */}
-              <h2 className="block text-3xl bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-2 text-center mb-4">
+              <h2 className="block text-4xl text-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-2 text-center mb-4">
                 {yacht.name}
               </h2>
 
@@ -472,36 +471,26 @@ export default function Home() {
             ))}
           </div>
 
-          {/* الصورة في المنتصف */}
-          <div className="lg:w-1/3 flex justify-center">
-            <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl border-2 ">
-              {/* <Image
-                src="/images/yachtphoto2.jpg"
-                alt="Luxury Yacht Experience"
-                fill
-                className="object-cover"
-              /> */}
-            <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl p-1 gradient-border">
-               <Image
-                  src="/images/P1(3).jpg"
-                  alt="Luxury Yacht Experience"
-                   width={400}
-                    height={320}
-                    className="object-cover rounded-2xl w-full h-full"
-                    loading="lazy"
-                   />
-                 </div>
-
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">AZ-Technology</h3>
-                  <p className="text-gray-200">نبتكر حلولاً رقمية بروح من الإبداع والشغف، لنساعد الشركات على المضي قدماً بثقة.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+         {/* الصورة في المنتصف */}
+<div className="lg:w-1/3 flex justify-center">
+  <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl border-2 border-gray-700">
+    <Image
+      src="/images/P1(3).jpg"
+      alt="Luxury Yacht Experience"
+      width={400}
+      height={320}
+      className="object-cover rounded-2xl w-full h-full"
+    />
+    
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+      <div className="p-6 text-white">
+        <h3 className="text-xl font-bold mb-2">AZ-Technology</h3>
+        <p className="text-gray-200">نبتكر حلولاً رقمية بروح من الإبداع والشغف، لنساعد الشركات على المضي قدماً بثقة.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* الميزات اليمنى */}
           <div className="lg:w-2/5">

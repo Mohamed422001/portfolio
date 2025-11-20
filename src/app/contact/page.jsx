@@ -83,7 +83,7 @@ export default function ContactPage() {
       title: "تابعنا",
       details: "@AZ-Technology",
       link: "https://www.facebook.com/share/1CmdxQUe1m/",
-      color: "text-pink-400",
+      color: "text-white",
     },
   ];
 
@@ -291,7 +291,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-black font-bold py-4 px-6 rounded-xl hover:from-yellow-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
+                  className="w-full bg-white text-black font-bold py-4 px-6 rounded-xl hover:from-yellow-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
                 >
                   <FaPaperPlane className="text-lg " />
                   ارسل الان

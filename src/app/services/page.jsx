@@ -270,11 +270,75 @@ export default function ServicesPage() {
     //------------------------------------    🎨 تصميم واجهات وتجربة المستخدم (UI/UX)-----------------------------
     {
       id: 25,
-      title: "نماذج من اعمالنا",
-      image: "/images/mon.jpg",
+      title: "صالة كمال اجسام",
+      image: "/images/gy.jpg",
       category: "ui",
       icon: FaPalette,
-      link: "https://drive.google.com/drive/folders/1xAlYOPtNINoO7AwXjz0rvbKqK1OWobCY",
+      link: "https://www.figma.com/design/MsUXSToWyJ6A55safdCITx/Gym?node-id=0-1&t=G1eEtKVE2FpITqsL-1",
+      popular: true,
+    },
+    {
+      id: 25,
+      title: "عيادة التجميل",
+      image: "/images/be.jpg",
+      category: "ui",
+      icon: FaPalette,
+      link: "https://www.figma.com/design/ewaJHZP8kdRGLnnjGPhbpu/%D8%B9%D9%8A%D8%A7%D8%AF%D9%87-%D8%A7%D9%84%D8%AA%D8%AC%D9%85%D9%8A%D9%84?node-id=0-1&t=luVKwV9pfvs3VK4h-1",
+      popular: true,
+    },
+     {
+      id: 25,
+      title: "مقهى ومشروبات",
+      image: "/images/caf.jpg",
+      category: "ui",
+      icon: FaPalette,
+      link: "https://www.figma.com/design/Ads7OMWh020Ub15BSE6FKc/coffee-website?node-id=0-1&t=kDH1FoLgRHpmTnQU-1",
+      popular: true,
+    },
+      {
+      id: 25,
+      title: "منصة تعليمية",
+      image: "/images/ed.jpg",
+      category: "ui",
+      icon: FaPalette,
+      link: "https://www.figma.com/design/nJO1woFh7c1O26FoxNmwFU/educational-platform-website?node-id=0-1&t=KiSxGkHoMQv31CDl-1",
+      popular: true,
+    },
+      {
+      id: 25,
+      title: "متجر الكترونى",
+      image: "/images/ec.jpg",
+      category: "ui",
+      icon: FaPalette,
+      link: "https://www.figma.com/design/3ptzUm7LZrZluhsAXCgioa/e-commerce-website?node-id=0-1&t=N2De0vRYB094tagp-1",
+      popular: true,
+    },
+     {
+      id: 25,
+      title: "موقع لبيع الأثاث",
+      image: "/images/fu.jpg",
+      category: "ui",
+      icon: FaPalette,
+      link: "https://www.figma.com/design/krIqpNuKsZi0I19pIxGq7e/%D9%85%D9%88%D9%82%D8%B9-%D8%A7%D9%84%D8%A7%D8%AB%D8%A7%D8%AB?node-id=0-1&t=EmQb8cyXKZGmHrQJ-1",
+      popular: true,
+    },
+      {
+      id: 25,
+      title: "تطبيق لتشخيص التوحد",
+      image: "/images/me.jpg",
+      category: "ui",
+      icon: FaPalette,
+      link: "https://www.figma.com/design/bjBG029298P6rK1CpbAiQQ/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D9%84%D8%AA%D8%B4%D8%AE%D8%B5-%D8%A7%D9%84%D8%AA%D9%88%D8%AD%D8%AF?node-id=0-1&t=PKjgCLVrw1ywwTZQ-1",
+      popular: true,
+    },
+
+    {
+      id: 25,
+      title: "تطبيق طبيبي",
+      image: "/images/me2.jpg",
+      category: "ui",
+      icon: FaPalette,
+      link: "https://www.figma.com/design/oahGVpBOX1gUi2Eh999ViC/%D9%80%D8%B7%D8%A8%D9%8A%D9%82-%D8%B7%D8%A8%D9%8A%D8%A8%D9%8A?node-id=0-1&t=voKP1uNiQjWqvTUA-1",
       popular: true,
     },
     //------------------------------------  🎨 تصميم واجهات وتجربة المستخدم (UI/UX)  -----------------------------
@@ -550,53 +614,54 @@ export default function ServicesPage() {
           })}
         </div>
 
-        {/* SERVICES GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {filteredServices.map((service) => {
-            const IconComponent = service.icon;
-            const categoryName = getCategoryName(service.category);
-            
-            return (
-              <div
-                key={service.id}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 overflow-hidden hover:shadow-2xl transition-all duration-300 group"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={service.image}
-                    loading="lazy"
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  
-                  {/* شريط الفئة والأيقونة أعلى الصورة */}
-                  <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-white py-2 px-4 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <IconComponent className="text-white" />
-                      <span className="font-bold text-sm">{categoryName}</span>
-                    </div>
-                   
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl text-center font-bold text-white mb-9">
-                    {service.title}
-                  </h3>
-
-                  <div className="flex gap-3">
-                    <a href={service.link} target="_blank" className="flex-1">
-                      <button className="w-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-black font-semibold py-3 px-4 rounded-lg border text-white border-white/30 hover:bg-gray-200 transition">
-                        زيارة المشروع
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+      {/* SERVICES GRID */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+  {filteredServices.map((service) => {
+    const IconComponent = service.icon;
+    const categoryName = getCategoryName(service.category);
+    
+    return (
+      <div
+        key={service.id}
+        className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 overflow-hidden hover:shadow-2xl transition-all duration-300 group flex flex-col"
+      >
+        <div className="relative h-48 overflow-hidden">
+          <Image
+            src={service.image}
+            loading="lazy"
+            alt={service.title}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-500"
+          />
         </div>
+
+        {/* شريط الفئة والأيقونة تحت الصورة */}
+        <div className="px-4 pt-3 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] p-2 rounded-full">
+              <IconComponent className="text-white text-sm" />
+            </div>
+            <span className="font-bold text-sm text-white">{categoryName}</span>
+          </div>
+        </div>
+
+        <div className="p-6 flex flex-col flex-grow">
+          <h3 className="text-xl text-center font-bold text-white mb-9 flex-grow">
+            {service.title}
+          </h3>
+
+          <div className="flex gap-3 mt-auto">
+            <a href={service.link} target="_blank" className="flex-1">
+              <button className="w-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-black font-semibold py-3 px-4 rounded-lg border text-white border-white/30 hover:bg-gray-200 transition">
+                زيارة المشروع
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  })}
+</div>
       </div>
     </div>
   );
