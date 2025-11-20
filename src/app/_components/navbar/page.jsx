@@ -18,7 +18,7 @@ export default function Navbar() {
 `;
 
 
-  const phoneNumber = "201095435168";
+  const phoneNumber = "201128465022";
   const whatsappMessage = "Hello, I would like to book a yacht!";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
