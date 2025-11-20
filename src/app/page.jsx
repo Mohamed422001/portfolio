@@ -265,7 +265,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105">
                 <img
-                  src="/images/p1(3).jpg"
+                  src="/images/P1-3.jpg"
                   loading="lazy"
                   alt="Elite Pearl Yacht"
                   className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] object-cover transition-transform duration-700 hover:scale-110"
@@ -368,7 +368,7 @@ export default function Home() {
 <section className="py-5  from-blue-50 to-cyan-100 mb-3">
   <div className="container mx-auto px-4">
     <div className="text-center mb-12">
-      <h2 className="block text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-1">  خدمات استضافة ودومينات</h2>
+      <h2 className="block text-5xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-1">  خدمات استضافة ودومينات</h2>
       <div className="w-24 h-1 
        mx-auto mb-6"></div>
       <p className="text-white text-lg max-w-2xl mx-auto">
@@ -471,23 +471,31 @@ export default function Home() {
             ))}
           </div>
 
-         <div className="lg:w-1/3 flex justify-center">
-  <div className="relative w-full max-w-md h-80 rounded-2xl border-2 border-red-500 overflow-hidden bg-green-500">
-    {/* شاهد إذا ظهرت الخلفية الخضراء */}
-    <img
-      src="/images/P1(3).jpg"
-      alt="Luxury Yacht Experience"
-      className="w-full h-full object-cover"
-      onError={(e) => {
-        console.log('فشل تحميل الصورة');
-        e.target.style.display = 'none';
-      }}
-    />
-    <div className="absolute top-0 left-0 text-white p-2 bg-red-500">
-      اختبار ظهور الصورة
-    </div>
-  </div>
-</div>
+          {/* الصورة في المنتصف */}
+          <div className="lg:w-1/3 flex justify-center">
+            <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl border-2 ">
+            
+            <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl p-1 ">
+               <Image
+                  src="/images/P1-3.jpg"
+                  alt="az technology Experience"
+                   width={400}
+                    height={320}
+                    className="object-cover rounded-2xl w-full h-full"
+                    loading="lazy"
+                   />
+                 </div>
+
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-bold mb-2">AZ-Technology</h3>
+                  <p className="text-gray-200">نبتكر حلولاً رقمية بروح من الإبداع والشغف، لنساعد الشركات على المضي قدماً بثقة.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* الميزات اليمنى */}
           <div className="lg:w-2/5">
@@ -519,7 +527,7 @@ export default function Home() {
   <div className="bg-white/5 rounded-3xl p-8 md:p-12 
    border border-white/10 backdrop-blur-sm mb-16">
     <div className="text-center mb-12">
-      <h2 className="block text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-1">
+      <h2 className="block text-5xl md:text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-4 text-center mb-1">
         كيف نعمل؟
       </h2>
       <p className="text-gray-300 text-lg">نهج منهجي يضمن تحقيق أفضل النتائج</p>
