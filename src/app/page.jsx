@@ -471,16 +471,21 @@ export default function Home() {
             ))}
           </div>
 
-         {/* الصورة في المنتصف */}
-<div className="lg:w-1/3 flex justify-center">
-  <div className="relative w-full max-w-md h-80 rounded-2xl border-2 border-gray-700 overflow-hidden">
-    <Image
+         <div className="lg:w-1/3 flex justify-center">
+  <div className="relative w-full max-w-md h-80 rounded-2xl border-2 border-red-500 overflow-hidden bg-green-500">
+    {/* شاهد إذا ظهرت الخلفية الخضراء */}
+    <img
       src="/images/P1(3).jpg"
       alt="Luxury Yacht Experience"
-      width={400}
-      height={320}
       className="w-full h-full object-cover"
+      onError={(e) => {
+        console.log('فشل تحميل الصورة');
+        e.target.style.display = 'none';
+      }}
     />
+    <div className="absolute top-0 left-0 text-white p-2 bg-red-500">
+      اختبار ظهور الصورة
+    </div>
   </div>
 </div>
 
