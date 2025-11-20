@@ -230,7 +230,30 @@ export default function Home() {
 </div>
 
    
-   
+    {/* الأزرار */}
+              <div className="flex justify-start items-center pt-4 gap-3">
+
+  {/* زرار الاتصال */}
+  <a href="tel:01004813709">
+    <button
+      className="bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] flex items-center gap-2 cursor-pointer border-2 border-white text-white hover:bg-white font-bold 
+                 py-4 px-5 sm:py-4 sm:px-8 rounded-full text-sm sm:text-lg transition-all duration-300 transform hover:scale-105 min-w-[160px] sm:min-w-[200px]"
+    >
+      <FaPhoneAlt className="text-white" size={18} />
+      تواصل معنا
+    </button>
+  </a>
+
+  {/* زرار سابقة الأعمال */}
+  <Link href="/services">
+    <button
+      className="bg-transparent cursor-pointer border-2 border-white hover:bg-white hover:text-[#7D1C99] font-bold 
+                 py-4 px-5 sm:py-4 sm:px-8 rounded-full text-sm sm:text-lg transition-all duration-300 transform hover:scale-105 min-w-[160px] sm:min-w-[200px] text-white">
+      عرض سابقة الاعمال
+    </button>
+  </Link>
+
+              </div>
 
 
                   
@@ -243,7 +266,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105">
                 <img
-                  src="/images/p1 (3).jpg"
+                  src="/images/p1(3).jpg"
                   loading="lazy"
                   alt="Elite Pearl Yacht"
                   className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] object-cover transition-transform duration-700 hover:scale-110"
@@ -460,7 +483,7 @@ export default function Home() {
               /> */}
             <div className="relative w-full max-w-md h-80 overflow-hidden rounded-2xl p-1 gradient-border">
                <Image
-                  src="/images/P1 (3).jpg"
+                  src="/images/P1(3).jpg"
                   alt="Luxury Yacht Experience"
                    width={400}
                     height={320}
