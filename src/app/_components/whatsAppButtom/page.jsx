@@ -30,7 +30,7 @@ const WhatsAppButton = () => {
     <div className="fixed bottom-6 right-6 flex flex-col items-center gap-3 z-50">
       {/* زر الواتس */}
       <a
-        href="https://wa.me/01128465022"
+        href="https://wa.me/201128465022"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition hover:scale-110"

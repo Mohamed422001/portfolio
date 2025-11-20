@@ -19,7 +19,7 @@ export default function Navbar() {
 
 
   const phoneNumber = "201128465022";
-  const whatsappMessage = "Hello, I would like to book a yacht!";
+  const whatsappMessage = "مرحبًا، أحتاج تفاصيل عن خدمات البرمجة والتسويق الخاصة بكم. شكرًا.";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     whatsappMessage
