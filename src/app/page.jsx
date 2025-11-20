@@ -185,7 +185,7 @@ export default function Home() {
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
            <span
          dir="rtl" className="text-white block text-right text-3xl ">
-           من نحن بيومى            
+           من نحن             
         </span>
 
 
