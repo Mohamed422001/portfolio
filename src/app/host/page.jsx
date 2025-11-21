@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import {
   FaAnchor,
   FaWater,
@@ -566,7 +567,7 @@ export default function HostingPage() {
         <div className="w-2 h-2 bg-blue-500 rounded-full animate-ping"></div>
         <span className="text-white font-medium text-sm">الحلول المتكاملة</span>
       </div>
-      <h2  className="block  text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FFOOFF] bg-clip-text text-transparent animate-gradient-x pb-5 text-center">
+      <h2  className="block  text-5xl font-bold bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x pb-5 text-center">
         تجربة استثنائية
       </h2>
       <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
@@ -779,7 +780,22 @@ export default function HostingPage() {
         </div>
       </section>
 
-     
+      {/* الأنيميشن المخصصة */}
+      <style jsx>{`
+        @keyframes gradient-x {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 3s ease infinite;
+        }
+      `}</style>
     </div>
   );
 }

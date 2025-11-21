@@ -278,7 +278,7 @@ export default function ServicesPage() {
       popular: true,
     },
     {
-      id: 25,
+      id: 26,
       title: "عيادة التجميل",
       image: "/images/be.jpg",
       category: "ui",
@@ -287,7 +287,7 @@ export default function ServicesPage() {
       popular: true,
     },
      {
-      id: 25,
+      id: 27,
       title: "مقهى ومشروبات",
       image: "/images/caf.jpg",
       category: "ui",
@@ -296,7 +296,7 @@ export default function ServicesPage() {
       popular: true,
     },
       {
-      id: 25,
+      id: 28,
       title: "منصة تعليمية",
       image: "/images/ed.jpg",
       category: "ui",
@@ -305,7 +305,7 @@ export default function ServicesPage() {
       popular: true,
     },
       {
-      id: 25,
+      id: 29,
       title: "متجر الكترونى",
       image: "/images/ec.jpg",
       category: "ui",
@@ -314,7 +314,7 @@ export default function ServicesPage() {
       popular: true,
     },
      {
-      id: 25,
+      id: 30,
       title: "موقع لبيع الأثاث",
       image: "/images/fu.jpg",
       category: "ui",
@@ -323,7 +323,7 @@ export default function ServicesPage() {
       popular: true,
     },
       {
-      id: 25,
+      id: 31,
       title: "تطبيق لتشخيص التوحد",
       image: "/images/me.jpg",
       category: "ui",
@@ -333,7 +333,7 @@ export default function ServicesPage() {
     },
 
     {
-      id: 25,
+      id: 32,
       title: "تطبيق طبيبي",
       image: "/images/me2.jpg",
       category: "ui",
@@ -345,7 +345,7 @@ export default function ServicesPage() {
 
     //------------------------------------  🎨      تحسين نتائج البحث في جوجل (SEO)  -----------------------------
     {
-      id: 26,
+      id: 33,
       title: "نماذج من اعمالنا",
       image: "/images/mon.jpg",
       category: "seo",
@@ -473,7 +473,7 @@ export default function ServicesPage() {
             {/* العنوان الرئيسي مع تأثير Matrix */}
            <div className="mb-12">
   <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-none tracking-tighter">
-    <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+    <span className="bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] bg-clip-text text-transparent animate-gradient-x">
       -AZ
     </span>
     <br />
@@ -482,7 +482,6 @@ export default function ServicesPage() {
     </span>
   </h1>
 </div>
-
 
             {/* الوصف المتطور */}
             <div className="max-w-3xl mx-auto mb-16">
@@ -566,7 +565,6 @@ export default function ServicesPage() {
 
 </div>
 
-
           </div>
         </div>
 
@@ -628,10 +626,11 @@ export default function ServicesPage() {
         <div className="relative h-48 overflow-hidden">
           <Image
             src={service.image}
-            loading="lazy"
             alt={service.title}
             fill
             className="object-cover group-hover:scale-110 transition-transform duration-500"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
         </div>
 
@@ -651,7 +650,7 @@ export default function ServicesPage() {
           </h3>
 
           <div className="flex gap-3 mt-auto">
-            <a href={service.link} target="_blank" className="flex-1">
+            <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex-1">
               <button className="w-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] text-black font-semibold py-3 px-4 rounded-lg border text-white border-white/30 hover:bg-gray-200 transition">
                 زيارة المشروع
               </button>
@@ -663,6 +662,36 @@ export default function ServicesPage() {
   })}
 </div>
       </div>
+
+      {/* الأنيميشن المخصصة */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
+        @keyframes gradient-x {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 3s ease infinite;
+        }
+      `}</style>
     </div>
   );
 }

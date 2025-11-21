@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import {
   FaUserTie,
   FaCheckCircle,
@@ -8,7 +9,7 @@ import {
   FaUmbrellaBeach,
   FaSmile,
   FaBed,
- FaBinoculars,
+  FaBinoculars,
   FaCouch,
   FaLifeRing,
   FaChartLine,
@@ -17,7 +18,7 @@ import {
   FaWhatsapp,
   FaChair,
   FaLightbulb,
-   FaHandshake ,
+  FaHandshake,
   FaFolderOpen,
   FaPalette,
   FaRocket,
@@ -165,6 +166,7 @@ export default function Home() {
             loop
             muted
             playsInline
+            preload="metadata"
             className="object-cover w-full h-full pointer-events-none"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -173,21 +175,21 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col items-center pt-28 text-center">
             <div className="mb-12 animate-fadeInUp">
-             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 text-center">
-                 <span dir="rtl" className="block mb-6">من نحن</span>
-                 <span className="block">AZ-Technology</span>
-             </h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 text-center">
+                <span dir="rtl" className="block mb-6">من نحن</span>
+                <span className="block">AZ-Technology</span>
+              </h2>
 
               <div className="w-24 h-1 bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF] mx-auto mt-6 rounded-full"></div>
               <p dir="rtl" className="text-xl sm:text-xl md:text-xl font-bold text-white mt-5 mb-4">
-                 نؤمن بأن الإبداع هو أساس النجاح، لذا نعمل على تقديم حلول رقمية مبتكرة تساعد الشركات على النمو والتميز في عالم متغير بسرعة.
+                نؤمن بأن الإبداع هو أساس النجاح، لذا نعمل على تقديم حلول رقمية مبتكرة تساعد الشركات على النمو والتميز في عالم متغير بسرعة.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-        {/* قسم Sail Beyond Luxury */}
+      {/* قسم Sail Beyond Luxury */}
       <section className="py-8 px-4 relative overflow-hidden mt-5 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -197,79 +199,73 @@ export default function Home() {
                 قصتنا وخبراتنا {" "}
               </h1>
             
-               <div className="space-y-4 text-white leading-relaxed">
-                  <p dir="rtl" className="text-2xl sm:text-lg text-right">
-                   أكثر من 5 اعوام من مساعدة الشركات للوصول إلى افاق جديدة على الانترنت
-
+              <div className="space-y-4 text-white leading-relaxed">
+                <p dir="rtl" className="text-2xl sm:text-lg text-right">
+                  أكثر من 5 اعوام من مساعدة الشركات للوصول إلى افاق جديدة على الانترنت
+                </p>
+                <div className="flex items-center gap-2 justify-start">
+                  <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex">
+                    <FaLightbulb className="text-base text-white" />
+                  </div>
+                  <p className="text-base sm:text-lg text-right">
+                    نحن في AZ-Technology نؤمن أن النجاح الحقيقي يبدأ من فكرة تُنفّذ بإبداع وتتحقق بالتكنولوجيا
                   </p>
-                  <div className="flex items-center gap-2 justify-start">
-                    <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex">
-                      <FaLightbulb className="text-base text-white" />
-                    </div>
-                      <p className="text-base sm:text-lg text-right">
- نحن في AZ-Technology نؤمن أن النجاح الحقيقي يبدأ من فكرة تُنفّذ بإبداع وتتحقق بالتكنولوجيا                    </p>
-                  </div>
-
-                  <div className="flex items-center gap-2 justify-start">
-                      <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex">
-                        <FaPalette className="text-base text-white" />
-                      </div>
-                    
-                      <p className="text-base sm:text-lg text-right">
-                                         من هذا المبدأ انطلقت رحلتنا لتقديم حلول رقمية متكاملة تساعد الشركات والمؤسسات على النمو، التطور، والتألق في عالم رقمي سريع التغيّر. 
-                      </p>
-                  </div>
-
-                  <div className="flex items-center gap-2 justify-start">
-                    <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex">
-                      <FaHandshake className="text-base text-white" />
-                    </div>
-                  
-                    <p className="text-base sm:text-lg text-right">
-                     نحن لا نُقدّم مجرد خدمات، بل نبني شراكات طويلة الأمد مبنية على الثقة، الجودة، والنتائج الملموسة.
-                    </p>
-                  </div>
-
-                
-
                 </div>
+
+                <div className="flex items-center gap-2 justify-start">
+                  <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex">
+                    <FaPalette className="text-base text-white" />
+                  </div>
+                  <p className="text-base sm:text-lg text-right">
+                    من هذا المبدأ انطلقت رحلتنا لتقديم حلول رقمية متكاملة تساعد الشركات والمؤسسات على النمو، التطور، والتألق في عالم رقمي سريع التغيّر.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2 justify-start">
+                  <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] inline-flex">
+                    <FaHandshake className="text-base text-white" />
+                  </div>
+                  <p className="text-base sm:text-lg text-right">
+                    نحن لا نُقدّم مجرد خدمات، بل نبني شراكات طويلة الأمد مبنية على الثقة، الجودة، والنتائج الملموسة.
+                  </p>
+                </div>
+              </div>
 
               {/* الأزرار */}
               <div className="flex justify-start items-center pt-4 gap-3">
+                {/* زرار الاتصال */}
+                <a href="tel:01004813709">
+                  <button
+                    className="bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] flex items-center gap-2 cursor-pointer border-2 border-white text-white hover:bg-white font-bold 
+                               py-4 px-5 sm:py-4 sm:px-8 rounded-full text-sm sm:text-lg transition-all duration-300 transform hover:scale-105 min-w-[160px] sm:min-w-[200px]"
+                  >
+                    <FaPhoneAlt className="text-white" size={18} />
+                    تواصل معنا
+                  </button>
+                </a>
 
-  {/* زرار الاتصال */}
-  <a href="tel:01004813709">
-    <button
-      className="bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] flex items-center gap-2 cursor-pointer border-2 border-white text-white hover:bg-white font-bold 
-                 py-4 px-5 sm:py-4 sm:px-8 rounded-full text-sm sm:text-lg transition-all duration-300 transform hover:scale-105 min-w-[160px] sm:min-w-[200px]"
-    >
-      <FaPhoneAlt className="text-white" size={18} />
-      تواصل معنا
-    </button>
-  </a>
-
-  {/* زرار سابقة الأعمال */}
-  <Link href="/services">
-    <button
-      className="bg-transparent cursor-pointer border-2 border-white hover:bg-white hover:text-[#7D1C99] font-bold 
-                 py-4 px-5 sm:py-4 sm:px-8 rounded-full text-sm sm:text-lg transition-all duration-300 transform hover:scale-105 min-w-[160px] sm:min-w-[200px] text-white">
-      عرض سابقة الاعمال
-    </button>
-  </Link>
-
+                {/* زرار سابقة الأعمال */}
+                <Link href="/services">
+                  <button
+                    className="bg-transparent cursor-pointer border-2 border-white hover:bg-white hover:text-[#7D1C99] font-bold 
+                               py-4 px-5 sm:py-4 sm:px-8 rounded-full text-sm sm:text-lg transition-all duration-300 transform hover:scale-105 min-w-[160px] sm:min-w-[200px] text-white">
+                    عرض سابقة الاعمال
+                  </button>
+                </Link>
               </div>
-
-            
             </div>
 
             {/* الصورة */}
             <div className="w-full lg:w-1/2">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105">
-                <img
+                <Image
                   src="/images/22.jpg"
-                  loading="lazy"
                   alt="Luxury Yacht"
+                  width={600}
+                  height={500}
                   className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] object-cover transition-transform duration-700 hover:scale-110"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20 mix-blend-overlay"></div>
               </div>
@@ -277,8 +273,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-  
 
       {/* قسم Beyond Ordinary */}
       <section className="relative min-h-screen py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -304,21 +298,21 @@ export default function Home() {
               className={`absolute ${
                 i % 3 === 0 ? "w-8 h-8" : i % 2 === 0 ? "w-12 h-3" : "w-6 h-6"
               } 
-          border-2 ${
-            i % 4 === 0
-              ? "border-cyan-400/20"
-              : i % 3 === 0
-              ? "border-purple-400/20"
-              : "border-blue-400/20"
-          }
-          ${
-            i % 3 === 0
-              ? "rounded-full"
-              : i % 2 === 0
-              ? "rounded-lg"
-              : "rotate-45"
-          }
-          animate-float-random`}
+              border-2 ${
+                i % 4 === 0
+                  ? "border-cyan-400/20"
+                  : i % 3 === 0
+                  ? "border-purple-400/20"
+                  : "border-blue-400/20"
+              }
+              ${
+                i % 3 === 0
+                  ? "rounded-full"
+                  : i % 2 === 0
+                  ? "rounded-lg"
+                  : "rotate-45"
+              }
+              animate-float-random`}
               style={{
                 left: `${10 + i * 12}%`,
                 top: `${15 + i * 8}%`,
@@ -355,7 +349,6 @@ export default function Home() {
                 {" "}
                 بخطوات مدروسة نحو النجاح.
               </span>
-              .
             </p>
           </div>
 
@@ -451,9 +444,9 @@ export default function Home() {
               {/* المحتوى */}
               <div dir="rtl" className="relative bg-slate-800/80 backdrop-blur-xl rounded-2xl border border-slate-600/50 p-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                 هل أنت {" "}
+                  هل أنت {" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                      مستعد
+                    مستعد
                   </span>{" "}
                   للبدء ؟
                 </h2>
@@ -461,33 +454,31 @@ export default function Home() {
                   انضم إلى نخبة من رواد الأعمال والمبتكرين الذين يتطلعون لتجاوز المألوف.
                 </p>
 
-         
-
-                 <a
+                <a
                   href="https://wa.me/201128465022"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
                 >
-                <button className="group relative bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 text-white font-bold py-4 px-12 rounded-full text-lg transition-all duration-500 transform hover:scale-105 border border-slate-500/50 hover:border-slate-400/50">
-                  <span className="relative z-10 flex items-center gap-3">
-                    <span>ابدأ رحلتك الآن</span>
-                    <svg
-                      className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </button>
+                  <button className="group relative bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 text-white font-bold py-4 px-12 rounded-full text-lg transition-all duration-500 transform hover:scale-105 border border-slate-500/50 hover:border-slate-400/50">
+                    <span className="relative z-10 flex items-center gap-3">
+                      <span>ابدأ رحلتك الآن</span>
+                      <svg
+                        className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </button>
                 </a>
               </div>
             </div>
@@ -621,83 +612,78 @@ export default function Home() {
             <p dir="rtl" className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed mb-8">
               حيث يلتقي <span className="text-from-purple-400 to-pink-400 font-bold">الإبداع بالحلول الرقمية،</span>{" "}
               لتصبح كل تجربة مشروعًا فريدًا لا يُنسى.
-             
             </p>
 
-           {/* شريط إحصائيات متحرك بإطار زجاجي */}
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-  {[
-    {
-      number: "5+",
-      label: "سنوات خبرة",
-      color: "from-emerald-400 to-cyan-400",
-      gradient: "bg-gradient-to-br from-emerald-500 to-cyan-500",
-       icon: <FaUserTie className="text-xl" />,
-
-    },
-    {
-      number: "200+",
-      label: "المشروعات المنجزة",
-      color: "from-purple-400 to-pink-400",
-      gradient: "bg-gradient-to-br from-purple-500 to-pink-500",
-      icon: <FaCheckCircle className="text-xl" />,
-
-    },
-    {
-      number: "98%",
-      label: "رضا العملاء",
-      color: "from-orange-400 to-red-400",
-      gradient: "bg-gradient-to-br from-orange-500 to-red-500",
-      icon: <FaSmile className="text-xl" />,
-
-    },
-    {
-      number: "24/7",
-      label: "دعم مثالى",
-      color: "from-blue-400 to-indigo-400",
-      gradient: "bg-gradient-to-br from-blue-500 to-indigo-500",
-      icon: <FaLifeRing className="text-xl" />,
-
-    },
-  ].map((stat, index) => (
-    <div
-      key={index}
-      className="group perspective-1000 transform-style-preserve-3d"
-    >
-      <div className="relative transform transition-all duration-700 group-hover:rotate-x-12 group-hover:-translate-y-4">
-        {/* تأثير الإضاءة الخلفية */}
-        <div className={`absolute inset-0 ${stat.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10`}></div>
-        
-        {/* البطاقة الزجاجية */}
-        <div className="backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl p-6 text-center shadow-2xl shadow-black/20 group-hover:shadow-cyan-500/10 group-hover:border-white/20 transition-all duration-500">
-          
-          {/* دائرة الأيقونة */}
-          <div className="relative inline-flex mb-4">
-            <div className={`absolute inset-0 ${stat.gradient} rounded-full blur-md opacity-60 group-hover:opacity-80 transition-opacity duration-500`}></div>
-            <div className="relative bg-slate-900/80 rounded-full p-3 border border-white/10 group-hover:border-white/20 transition-colors duration-300">
-              <span className="text-xl text-white">{stat.icon}</span>
+            {/* شريط إحصائيات متحرك بإطار زجاجي */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              {[
+                {
+                  number: "5+",
+                  label: "سنوات خبرة",
+                  color: "from-emerald-400 to-cyan-400",
+                  gradient: "bg-gradient-to-br from-emerald-500 to-cyan-500",
+                  icon: <FaUserTie className="text-xl" />,
+                },
+                {
+                  number: "200+",
+                  label: "المشروعات المنجزة",
+                  color: "from-purple-400 to-pink-400",
+                  gradient: "bg-gradient-to-br from-purple-500 to-pink-500",
+                  icon: <FaCheckCircle className="text-xl" />,
+                },
+                {
+                  number: "98%",
+                  label: "رضا العملاء",
+                  color: "from-orange-400 to-red-400",
+                  gradient: "bg-gradient-to-br from-orange-500 to-red-500",
+                  icon: <FaSmile className="text-xl" />,
+                },
+                {
+                  number: "24/7",
+                  label: "دعم مثالى",
+                  color: "from-blue-400 to-indigo-400",
+                  gradient: "bg-gradient-to-br from-blue-500 to-indigo-500",
+                  icon: <FaLifeRing className="text-xl" />,
+                },
+              ].map((stat, index) => (
+                <div
+                  key={index}
+                  className="group perspective-1000 transform-style-preserve-3d"
+                >
+                  <div className="relative transform transition-all duration-700 group-hover:rotate-x-12 group-hover:-translate-y-4">
+                    {/* تأثير الإضاءة الخلفية */}
+                    <div className={`absolute inset-0 ${stat.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10`}></div>
+                    
+                    {/* البطاقة الزجاجية */}
+                    <div className="backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl p-6 text-center shadow-2xl shadow-black/20 group-hover:shadow-cyan-500/10 group-hover:border-white/20 transition-all duration-500">
+                      
+                      {/* دائرة الأيقونة */}
+                      <div className="relative inline-flex mb-4">
+                        <div className={`absolute inset-0 ${stat.gradient} rounded-full blur-md opacity-60 group-hover:opacity-80 transition-opacity duration-500`}></div>
+                        <div className="relative bg-slate-900/80 rounded-full p-3 border border-white/10 group-hover:border-white/20 transition-colors duration-300">
+                          <span className="text-xl text-white">{stat.icon}</span>
+                        </div>
+                      </div>
+                      
+                      {/* الرقم مع تأثير توهج */}
+                      <div className="relative mb-2">
+                        <div className={`text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent drop-shadow-lg group-hover:scale-110 transition-transform duration-500`}>
+                          {stat.number}
+                        </div>
+                        {/* تأثير توهج خفيف */}
+                        <div className={`absolute inset-0 ${stat.gradient} blur-md opacity-0 group-hover:opacity-30 transition-opacity duration-500 -z-10`}></div>
+                      </div>
+                      
+                      {/* التسمية */}
+                      <div className="text-blue-100 font-medium text-sm uppercase tracking-widest group-hover:text-white transition-colors duration-300 relative">
+                        {stat.label}
+                        <div className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 ${stat.gradient} group-hover:w-12 transition-all duration-500 rounded-full`}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-          
-          {/* الرقم مع تأثير توهج */}
-          <div className="relative mb-2">
-            <div className={`text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent drop-shadow-lg group-hover:scale-110 transition-transform duration-500`}>
-              {stat.number}
-            </div>
-            {/* تأثير توهج خفيف */}
-            <div className={`absolute inset-0 ${stat.gradient} blur-md opacity-0 group-hover:opacity-30 transition-opacity duration-500 -z-10`}></div>
-          </div>
-          
-          {/* التسمية */}
-          <div className="text-blue-100 font-medium text-sm uppercase tracking-widest group-hover:text-white transition-colors duration-300 relative">
-            {stat.label}
-            <div className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 ${stat.gradient} group-hover:w-12 transition-all duration-500 rounded-full`}></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
           </div>
 
           {/* محتوى رئيسي مع تأثيرات 3D */}
@@ -715,7 +701,7 @@ export default function Home() {
                   </h2>
                 </div>
                 <p dir="rtl" className="text-lg text-blue-100 leading-relaxed">
-                 نقدم حلولًا مبتكرة تجمع بين الإبداع والتقنية لتطوير أعمالك وتحقيق أهدافك بكفاءة واحترافية.
+                  نقدم حلولًا مبتكرة تجمع بين الإبداع والتقنية لتطوير أعمالك وتحقيق أهدافك بكفاءة واحترافية.
                 </p>
               </div>
 
@@ -732,7 +718,6 @@ export default function Home() {
                     title: "رؤيتنا",
                     desc: "رؤيتنا هي قيادة مستقبل الأعمال من خلال حلول تقنية مبتكرة تدعم التطور وتحقق النجاح المستدام.",
                   },
-               
                   {
                     icon: <FaChartLine className="text-xl" />,
                     title: "نتائجنا",
@@ -743,9 +728,9 @@ export default function Home() {
                     key={index}
                     className="group flex items-center gap-4 p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:-translate-y-1"
                   >
-                     <div className="relative bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-full p-3 border border-white/10 group-hover:border-white/20 transition-colors duration-300">
-              <span className="text-xl text-white">{feature.icon}</span>
-            </div>
+                    <div className="relative bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] rounded-full p-3 border border-white/10 group-hover:border-white/20 transition-colors duration-300">
+                      <span className="text-xl text-white">{feature.icon}</span>
+                    </div>
                     <div>
                       <h3 className="text-white font-bold text-lg mb-1">
                         {feature.title}
@@ -774,14 +759,10 @@ export default function Home() {
                       muted
                       loading="lazy"
                       playsInline
+                      preload="metadata"
                       className="object-cover w-full h-full pointer-events-none"
                     />
                   </div>
-
-                
-
-                  {/* أزرار إضافية */}
-                 
                 </div>
               </div>
             </div>
@@ -789,45 +770,43 @@ export default function Home() {
 
           {/* أزرار Call to Action متطورة */}
           <div className="flex items-center justify-center  ">
-  <div
-    className="bg-[#0f1218] text-center relative h-[50vh] w-full max-w-4xl bg-cover bg-center bg-no-repeat"
-   
-  >
-    {/* Overlay غامق فوق الصورة */}
-    <div className="absolute inset-0 bg-black/60"></div>
+            <div
+              className="bg-[#0f1218] text-center relative h-[50vh] w-full max-w-4xl bg-cover bg-center bg-no-repeat"
+            >
+              {/* Overlay غامق فوق الصورة */}
+              <div className="absolute inset-0 bg-black/60"></div>
 
-    {/* المحتوى */}
-    <div className="relative z-10 bg-black/0 rounded-2xl p-8 md:p-10 h-full flex flex-col justify-center">
-      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-        مستعد لبدء مشروعك الرقمي؟
-      </h3>
-      <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-        دعنا نناقش فكرتك ونحولها إلى واقع ملموس يدفع عملك نحو النجاح
-      </p>
+              {/* المحتوى */}
+              <div className="relative z-10 bg-black/0 rounded-2xl p-8 md:p-10 h-full flex flex-col justify-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  مستعد لبدء مشروعك الرقمي؟
+                </h3>
+                <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
+                  دعنا نناقش فكرتك ونحولها إلى واقع ملموس يدفع عملك نحو النجاح
+                </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Link href="/services">
-          <button className="bg-gradient-to-r flex items-center gap-2 from-[#00FFFF] to-[#FF00FF] text-white  px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] transform hover:-translate-y-1 min-w-[200px]">
-          <FaFolderOpen className="text-white" size={20} />
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <Link href="/services">
+                    <button className="bg-gradient-to-r flex items-center gap-2 from-[#00FFFF] to-[#FF00FF] text-white  px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] transform hover:-translate-y-1 min-w-[200px]">
+                      <FaFolderOpen className="text-white" size={20} />
+                      شاهد أعمالنا
+                    </button>
+                  </Link>
 
-            شاهد أعمالنا
-          </button>
-        </Link>
+                  <a href="tel:01004813709">
+                    <button className=" border-2 flex items-center gap-2 border-white  text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] transform hover:-translate-y-1 min-w-[200px] hover:shadow-xl transform hover:-translate-y-1 min-w-[200px]">
+                      <FaPhoneAlt className="text-white" size={20} />
+                      تحدث مع خبير
+                    </button>
+                  </a>
+                </div>
 
-        <a href="tel:01004813709">
-          <button className=" border-2 flex items-center gap-2 border-white  text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] transform hover:-translate-y-1 min-w-[200px] hover:shadow-xl transform hover:-translate-y-1 min-w-[200px]">
-          <FaPhoneAlt className="text-white" size={20} />
-           تحدث مع خبير
-          </button>
-        </a>
-      </div>
-
-      <p className="text-white text-sm mt-6">
-        استشارة مجانية • خطة عمل مفصلة • أسعار تنافسية • دعم مستمر
-      </p>
-    </div>
-  </div>
-</div>
+                <p className="text-white text-sm mt-6">
+                  استشارة مجانية • خطة عمل مفصلة • أسعار تنافسية • دعم مستمر
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* الأنيميشن المخصصة */}
@@ -878,8 +857,6 @@ export default function Home() {
         `}</style>
       </section>
 
-    
-
       {/* قسم السلايدر الاحترافي */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* خلفية متحركة */}
@@ -898,7 +875,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            "استمع إلى تجارب عملائنا الذين اختبروا حلولنا الرقمية المبتكرة، واكتشف كيف ساعدناهم على تحقيق أهدافهم بنجاح."
+              "استمع إلى تجارب عملائنا الذين اختبروا حلولنا الرقمية المبتكرة، واكتشف كيف ساعدناهم على تحقيق أهدافهم بنجاح."
             </p>
           </div>
 
@@ -991,14 +968,16 @@ export default function Home() {
                   <div className="relative bg-slate-800/80 backdrop-blur-xl rounded-3xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-500 overflow-hidden hover:transform hover:-translate-y-2 h-full">
                     {/* الصورة */}
                     <div className="relative h-48 overflow-hidden">
-                      <img
+                      <Image
                         src={yacht.image}
-                        alt={yacht.name}
-                        loading="lazy"
+                        alt={`Yacht ${yacht.id}`}
+                        width={320}
+                        height={192}
                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                         onError={(e) => {
-                          e.target.src =
-                            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230ea5e9;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='200' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='white'%3ELuxury Yacht%3C/text%3E%3C/svg%3E";
+                          e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230ea5e9;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='200' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='white'%3ELuxury Yacht%3C/text%3E%3C/svg%3E";
                         }}
                       />
                       {/* طبقة تدرج فوق الصورة */}
@@ -1027,9 +1006,8 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link href="/services">
               <button className="group relative cursor-pointer border-2 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] font-bold py-4 px-12 text-white rounded-full text-lg transition-all duration-500 transform hover:scale-105">
-                
                 <span className="relative z-10 flex items-center gap-2">
-                     عرض سابقة الاعمال
+                  عرض سابقة الاعمال
                   <svg
                     className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
                     fill="none"
